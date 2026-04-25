@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
+const serverless = require('serverless-http');
 
 const app = express();
 app.use(cors());
@@ -259,6 +260,4 @@ app.get('/analytics/top-booking-date', async (req, res) => {
 /**
  * 🚀 START SERVER
  */
-const serverless = require('serverless-http');
-
 module.exports.handler = serverless(app);
