@@ -10,11 +10,11 @@ app.use(express.json());
  * 🔥 DATABASE CONNECTION
  */
 const pool = new Pool({
-  user: 'postgres',
-  host: 'marc-db.c3awo28o84db.ap-southeast-2.rds.amazonaws.com',
-  database: 'hotel_db',
-  password: 'admin1234',
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
   ssl: {
     rejectUnauthorized: false
   }
