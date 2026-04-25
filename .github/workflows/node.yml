@@ -23,7 +23,7 @@ jobs:
 
       - name: 🗜️ Zip project
         run: |
-          zip -r function.zip . -x "node_modules/*" ".git/*"
+          zip -r function.zip .
 
       - name: 🔐 Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
